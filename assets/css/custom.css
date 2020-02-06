@@ -1,0 +1,51 @@
+.container {
+    width: 40%;
+    padding-bottom: 50px;
+}
+
+.center {
+    margin: auto;        
+}
+
+.nav {
+    padding: 100px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.title {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.card {
+    padding: 30px;
+}
+
+.card-body {    
+    padding: 20px 0px;
+}
+
+.form-input {
+    border: none;
+    width: 75%;
+    margin: 0px 20px;
+    float: right;
+    color: #0ce00c;    
+}
+
+.card-text {
+    text-transform: uppercase;
+}
+
+.block-name {
+    text-transform: uppercase;
+    color: #3C4858;
+}
+
+.addblock-btn {
+    float: right;
+}
