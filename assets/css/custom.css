@@ -49,3 +49,10 @@
 .addblock-btn {
     float: right;
 }
+
+.arrow {
+    width: 50px;
+    height: auto;
+    position: relative;
+    left: 50%;
+}
