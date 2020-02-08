@@ -6,17 +6,15 @@ const addBlock = document.getElementById('add-block');
 
 
 let blockCount = 0;
-const createCard = () => {
+function createBlock() {
     if(newBlockData.value != "") {
         blockCount++;
         addBlock.parentNode.removeChild(addBlock);
         let clone = block.cloneNode(true);        
         clone.querySelector('h3').innerHTML = `Block #${blockCount}`;
+        clone.querySelector('input').value = newBlockData.value;
+        clone.querySelector('label').className = 'display-none';
         document.body.appendChild(clone);
         document.body.appendChild(addBlock);
     }
-}
-
-const generateHashes = () => {
-    previousHash.value = 'teste';
-}
+};

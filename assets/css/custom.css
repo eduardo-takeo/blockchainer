@@ -7,6 +7,10 @@
     margin: auto;        
 }
 
+.display-none {
+    display: none;
+}
+
 .nav {
     padding: 100px;
 }
