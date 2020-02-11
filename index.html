@@ -32,7 +32,7 @@
             </div>
             <div class="card-body">
               <p class="card-text">Previous hash <label id="previous-hash" type="text" class="form-input"></label></p>
-              <div class="card-text">Hash <input id="current-hash" type="text" class="form-input"></div>
+              <div class="card-text">Hash <label id="current-hash" type="text" class="form-input"></label></div>
             </div>
             <h3 id="teste" class="block-name">Genesis Block</h3>
         </div>
@@ -43,7 +43,7 @@
         <div class="card">            
             <div class="form-group bmd-form-group">
                 <label class="bmd-label-floating">Insert data here</label>
-                <input id="new-block-data" type="text" class="form-control">
+                <input oninput="generateHash()" id="new-block-data" type="text" class="form-control">
             </div>
             <div class="card-body">
                 <button onclick="createBlock()" class="btn btn-primary btn-round addblock-btn">Add block</button>
