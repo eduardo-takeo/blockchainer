@@ -22499,26 +22499,39 @@ exports.createContext = Script.createContext = function (context) {
 };
 
 },{}],156:[function(require,module,exports){
-const block = document.getElementById('block');
+module.exports=// {
+//     "genesis":{
+//         "data": "Hi! Welcome to the Blockchainer",
+//         "previousHash": 0,
+//         "currentHash": 123
+//     }, 
+//     "block1":{
+//         "data": "hi",
+//         "previousHash": 123,
+//         "currentHash": 1234567
+//     }
+// }
+
+[
+    "Hi! Welcome to the Blockchainer"    
+]
+},{}],157:[function(require,module,exports){
+const json = require('./blocks.json');
+
+const blockList = document.getElementById('block-list');
 const previousHash = document.getElementById('previous-hash');
 const currentHash = document.getElementById('current-hash');
-const newBlockData = document.getElementById('new-block-data');
+const dataInput = document.getElementById('block-data');
+const addblockButton = document.getElementById('addblock-btn');
+const block = document.getElementById('block');
 const addBlock = document.getElementById('add-block');
 
 
-let blockCount = 0;
-function createBlock() {
-    if(newBlockData.value != "") {
-        blockCount++;
-        addBlock.parentNode.removeChild(addBlock);
-        let clone = block.cloneNode(true);        
-        clone.querySelector('h3').innerHTML = `Block #${blockCount}`;
-        clone.querySelector('input').value = newBlockData.value;
-        clone.querySelector('label').className = 'display-none';
-        document.body.appendChild(clone);
-        document.body.appendChild(addBlock);
-    }
-};
+window.addEventListener('load', () => setCurrentHash(dataInput.value));
+
+dataInput.addEventListener('input', () => setCurrentHash(dataInput.value));
+
+addblockButton.addEventListener('click', createNewBlock);
 
 function generateHash(value) {
     return (
@@ -22529,5 +22542,29 @@ function generateHash(value) {
     )
 }
 
-console.log(generateHash('hi'));
-},{"crypto":55}]},{},[156]);
+function setCurrentHash(inputValue) {
+    currentHash.innerHTML = generateHash(inputValue);
+}
+
+function setPreviousHash() {
+    //TODO    
+}
+
+function updateHash() {
+    json.map((value) => setCurrentHash(value));
+}
+
+let blockCount = 0;
+function createNewBlock() {
+    const newBlockData = document.getElementById('new-block-data');    
+    if(newBlockData.value != "") {
+        blockCount++;
+        let clone = block.cloneNode(true);
+        clone.querySelector('h3').innerHTML = `Block #${blockCount}`;
+        clone.querySelector('input').value = newBlockData.value;        
+        blockList.appendChild(clone);
+        json.push(newBlockData.value);
+        updateHash();
+    }
+}
+},{"./blocks.json":156,"crypto":55}]},{},[157]);
