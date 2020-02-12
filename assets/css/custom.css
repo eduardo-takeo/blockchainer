@@ -1,10 +1,9 @@
 .container {
-    width: 40%;
+    width: 45%;
     padding-bottom: 50px;
-}
-
-.center {
-    margin: auto;        
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .display-none {
@@ -23,6 +22,7 @@
 .title {
     letter-spacing: 5px;
     text-transform: uppercase;
+    margin: auto;
 }
 
 .card {
@@ -34,7 +34,6 @@
 }
 
 .form-input {
-    border: none;
     width: 75%;
     margin: 0px 20px;
     float: right;
@@ -50,13 +49,15 @@
     color: #3C4858;
 }
 
+.addblock {
+    width: 60%;
+}
+
 .addblock-btn {
     float: right;
 }
 
 .arrow {
     width: 50px;
-    height: auto;
-    position: relative;
-    left: 50%;
+    height: auto;    
 }
