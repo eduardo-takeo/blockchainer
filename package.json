@@ -36,5 +36,7 @@
   },
   "devDependencies": {},
   "homepage": "https://demos.creative-tim.com/material-kit/index.html",
-  "dependencies": {}
+  "dependencies": {
+    "browserify": "^16.5.0"
+  }
 }

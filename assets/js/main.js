@@ -18,3 +18,12 @@ function createBlock() {
         document.body.appendChild(addBlock);
     }
 };
+
+function generateHash(value) {
+    return (
+        require("crypto")
+        .createHash("sha256")
+        .update(value)
+        .digest("hex")
+    )
+}
