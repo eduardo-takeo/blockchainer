@@ -22499,20 +22499,7 @@ exports.createContext = Script.createContext = function (context) {
 };
 
 },{}],156:[function(require,module,exports){
-module.exports=// {
-//     "genesis":{
-//         "data": "Hi! Welcome to the Blockchainer",
-//         "previousHash": 0,
-//         "currentHash": 123
-//     }, 
-//     "block1":{
-//         "data": "hi",
-//         "previousHash": 123,
-//         "currentHash": 1234567
-//     }
-// }
-
-[
+module.exports=[
     "Hi! Welcome to the Blockchainer"    
 ]
 },{}],157:[function(require,module,exports){
@@ -22547,7 +22534,8 @@ function setCurrentHash(inputValue) {
 }
 
 function setPreviousHash() {
-    //TODO    
+    //TODO
+    
 }
 
 function updateHash() {
@@ -22561,8 +22549,9 @@ function createNewBlock() {
         blockCount++;
         let clone = block.cloneNode(true);
         clone.querySelector('h3').innerHTML = `Block #${blockCount}`;
-        clone.querySelector('input').value = newBlockData.value;        
+        clone.querySelector('input').value = newBlockData.value;
         blockList.appendChild(clone);
+        
         json.push(newBlockData.value);
         updateHash();
     }

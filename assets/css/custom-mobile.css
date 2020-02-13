@@ -1,5 +1,48 @@
+@media screen and (max-width: 1500px) {
+    .container {
+        width: 60%;
+    }
+}
+
 @media screen and (max-width: 1280px) {
     .container {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .container {
         width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    
+    .title {
+        font-size: 6vw;
+    }
+
+    .card-row {
+        flex-direction: column;
+    }
+
+    .hash-label {
+        overflow: scroll;
+    }
+
+    .card-text {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .block-name {
+        font-size: 18px;
+    }
+
+    .addblock {
+        width: 100%;
     }
 }
